@@ -5,8 +5,23 @@ League of Legends is a online video game developed by Riot Games. This dataset, 
 Plus, throughout this project, Greg will teach Eric about League. 
 
 ## Cleaning and EDA (Exploratory Data Analysis)
-Since our question revolved around the kill/death ratio between bots and mids for LCK CL, we had to first query and filter the dataset to keep only the rows whose "league" column was equal to LCK CL and save the DataFrame to a variable called "lck_cl". Next, we examined the kills and deaths columns in lck_cl to see if there were any NaN values. Fortunately, there were no null values in either of the kills or deaths columsn in lck_cl which made it a lot easier for us to compute the kill/death ratio.
- 
+Since our question revolved around the kill/death ratio between bots and mids for LCK CL, we had to first query and filter the dataset to keep only the rows whose "league" column was equal to LCK CL and save the DataFrame to a variable called "lck_cl". Next, we examined the kills and deaths columns in lck_cl to see if there were any NaN values. Fortunately, there were no null values in either of the kills or deaths columns in lck_cl which made it a lot easier for us to compute the kill/death ratio. 
+
+Afterwards, to group the data into the bots and mids categories, we grouped the lck_cl by the gameid, side, position because we wanted to record each time the mid and bot position was played. gameid keeps track of the specific game, side keeps track of the blue or red side, and position keeps track of the position (mid, bot, etc.). This means that for each game, there should be two mids and two tops since there is one position played per side. 
+
+With the data all grouped properly, we then needed to only keep the columns we needed, which were the kills and deaths columns, as well as create two new DataFrames, one for just the bot rows and one for just the mid ros. To compute the kill/death ratio, we could simply divide the two kills and deaths columns of each dataframe. However, we discovered an issue with this because it is possible for a cetain position to have 0 deaths in a game, which would then lead to division by zero. 44But, we used our knowledge that to calculate the kill/death ratio, if someone dies zero times, then we calculate their kill/death ratio as if they died once. For example, if the mid on the blue side got 7 kills and died 0 times in a certain game, then we would say that their kill/death ratio was 7/1 = 7.0. We created a function to apply to the deaths columns that would turn any 0 to 1, which would allow for us to correctly calculate the kill/death ratio. Afterwards, we created a column to contain the kill/death ratios in both the bots DataFrame and mids DataFrame. We then merged these two DataFrames to create one master DataFrame which held the kill/death ratios for the bot and mid on each side. 
+
+Finally, we wanted to calculate the difference between the two, so we decided to do mid kill/death ratio - bot kill/death ratio. 
+
+
+|   botskd |   midskd |   midminusbotdiff |
+|---------:|---------:|------------------:|
+|      0.5 |      1   |               0.5 |
+|      4   |      2   |              -2   |
+|      0   |      0.5 |               0.5 |
+|      3   |      5   |               2   |
+|      1.5 |      5   |               3.5 |
+
 <iframe src="assets/killsvsdeaths-bots.html" width=800 height=600 frameBorder=0></iframe>
 
 
