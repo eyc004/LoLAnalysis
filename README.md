@@ -13,7 +13,7 @@ With the data all grouped properly, we then needed to only keep the columns we n
 
 Finally, we wanted to calculate the difference between the two, so we decided to do mid kill/death ratio - bot kill/death ratio. 
 
-The first few rows of our combined DataFrame looks like:
+The first few rows of our combined DataFrame are shown down below:
 
 
 |                                   |   botskd |   midskd |   midminusbotdiff |
