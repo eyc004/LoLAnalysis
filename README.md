@@ -5,7 +5,7 @@ League of Legends is a online video game developed by Riot Games. This dataset, 
 Plus, throughout this project, Greg will teach Eric about League. 
 
 ## Cleaning and EDA (Exploratory Data Analysis)
-
+<iframe src="assets/killsvsdeaths-bots.html" width=800 height=600 frameBorder=0></iframe>
 
 
 
