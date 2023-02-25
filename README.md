@@ -37,6 +37,8 @@ The plot presented above representing the difference between mid and bot lane ki
 <iframe src="assets/killsvsdeaths-bots.html" width=800 height=600 frameBorder=0></iframe>
 Something interesting about this plot is that it is slightly skewed to the right. When looking at this, we saw that the top 3 highest kill/death ratios were those who died fewer times. This makes sense because the denominator will change the ratio by a lot more, but also shows us a snowball effect, that as you get more kills, it's easier for you to get more kills in the feature. It can also relate to those who are more skilled, as those who are better at the game will get more skills and die less frequently. 
 
+### Interesting Aggregates
+<iframe src="assets/pos-side-kd-diff.html" width=800 height=600 frameBorder=0></iframe>
 
 ## Assessment of Missingness
 ## Hypothesis
