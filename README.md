@@ -35,10 +35,11 @@ The plot presented above representing the difference between mid and bot lane ki
 
 ### Bivariate Analysis
 <iframe src="assets/killsvsdeaths-bots.html" width=800 height=600 frameBorder=0></iframe>
-Something interesting about this plot is that it is slightly skewed to the right. When looking at this, we saw that the top 3 highest kill/death ratios were those who died fewer times. This makes sense because the denominator will change the ratio by a lot more, but also shows us a snowball effect, that as you get more kills, it's easier for you to get more kills in the feature. It can also relate to those who are more skilled, as those who are better at the game will get more skills and die less frequently. 
+When looking at this, we saw that the top 3 highest kill/death ratios were those who died fewer times. This makes sense because the denominator will change the ratio by a lot more, but also shows us a snowball effect, that as you get more kills, it's easier for you to get more kills in the feature. It can also relate to those who are more skilled, as those who are better at the game will get more skills and die less frequently. 
 
 ### Interesting Aggregates
 <iframe src="assets/pos-side-kd-diff.html" width=800 height=600 frameBorder=0></iframe>
+We decided to look at the different between the groupings of the sides and teams and their distribution of differences between the kill/death ratios. One thing that Greg pointed out was that generally, people felt like being on the blue side was better. However, with this plot, we found that they were all roughly distributed, so we ruled that out. 
 
 ## Assessment of Missingness
 ## Hypothesis
