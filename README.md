@@ -51,8 +51,9 @@ For the columns that missingness do depend on each other, our null hypothesis wa
 <iframe src="assets/missingnessdepends.html" width=800 height=600 frameBorder=0></iframe>
 After doing 500 repetitions of permutation tests and calculating the total variation distance, we determined that there is likely an association between the ‘league’ and the missingness of ‘cspm’ within the League of Legends dataset. With a p-value of 0.0, we reject the null hypothesis in favor of the alternative hypothesis. 
 
-
-
+For the columns whose missingness does not depend on each other, our null hypothesis was there was not an association between ‘cspm’ and the missingness of the column ‘split’. The alternative hypothesis is that there is an association between ‘cspm’ and the missingness of ‘split’.
+<iframe src="assets/missingnessdoesnotdepend.html" width=800 height=600 frameBorder=0></iframe>
+After doing 500 repetitions of permutation tests and calculating the total variation distance, we determined we do not have significant enough evidence to conclude that there is an association between the column ‘cspm’ and the missingness in the column of ‘split’. With a p-value of 1.0, we failed to reject the null hypothesis. 
 
 
 ## Hypothesis
