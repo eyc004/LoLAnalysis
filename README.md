@@ -57,3 +57,7 @@ After doing 500 repetitions of permutation tests and calculating the total varia
 
 
 ## Hypothesis
+Going back to our original question, "For the LCK CL league, which role typically performs better in the team: Bot Lanes (ADCs) or Mid Lanes?", our null hypothesis is that there is no significant difference between the kill/death ratios between Bot Lanes and Mid Lanes, and any difference is due to random chance. Our alternative hypothesis is that there Bot Lanes have a higher kill/death ratio than Mid Lanes, and this is not simply due to random chance. 
+
+We will be using permutation tests to compute the mean difference between the Bot Kill/Death Ratio and Mid Kill/Death Ratio, which will be our test statistic. We are using a significance level of 0.05. 
+<iframe src="assets/hypothesisplot.html" width=800 height=600 frameBorder=0></iframe>
