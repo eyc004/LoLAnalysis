@@ -29,9 +29,10 @@ The first few rows of our combined DataFrame are shown down below:
 
 ### Univariate Analysis
 
-
 <iframe src="assets/kdratiosdiff.html" width=400 height=300 frameBorder=0></iframe>
+The plot presented above representing the difference between mid and bot lane kill death ratios is skewed to the left, meaning that we see more extreme values on the left side. What this means is that there are instances where the bot has a much higher kill/death ratio than the mid's kill/death ratio. And in general, it looks like bots have a higher kill/death ratio than mids. 
 
+<iframe src="assets/killsvsdeaths-bots.html" width=400 height=300 frameBorder=0></iframe>
 
 
 ## Assessment of Missingness
