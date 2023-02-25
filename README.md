@@ -42,7 +42,17 @@ When looking at this, we saw that the top 3 highest kill/death ratios were those
 We decided to look at the different between the groupings of the sides and teams and their distribution of differences between the kill/death ratios. One thing that Greg pointed out was that generally, people felt like being on the blue side was better. However, with this plot, we found that they were all roughly distributed, so we ruled that out. 
 
 ## Assessment of Missingness
+
+### NMAR Analysis
 We do not believe that there is a column that is NMAR in our dataset. Much of the League of Legends data from 2022 that we were given appeared to be missing by design MD because they chunked each data column by game and had overall for the team (in that specific game) after each row of players (10 players). One such example is in the ‘damageshare’ column where each player was given a proportion corresponding to the damage they dealt relative to their team. The row for team total (in this column) is left empty for all of our data points. This additional data point would not tell us anything useful because it does not quite make sense to take the proportion of the total. It would not tell us anything useful. In addition, many of the columns that were not missing by design appeared to be fairly complete in their data, but to check for whether or not the data were missing at random (MAR) and missing completely at random (MCAR) we conducted two permutation tests. 
+
+### Missingness Dependency
+For the columns that missingness do depend on each other, our null hypothesis was there was not an association between ‘league’ and the missingness of the column ‘cspm’ (creep score per minute), and any variation would be due to random chance. The alternative hypothesis is that there is an association between ‘league’ and the missingness of ‘cspm’, and it is not due to random chance.
+<iframe src="assets/missingnessdepends.html" width=800 height=600 frameBorder=0></iframe>
+After doing 500 repetitions of permutation tests and calculating the total variation distance, we determined that there is likely an association between the ‘league’ and the missingness of ‘cspm’ within the League of Legends dataset. With a p-value of 0.0, we reject the null hypothesis in favor of the alternative hypothesis. 
+
+
+
 
 
 ## Hypothesis
