@@ -18,7 +18,7 @@ Finally, we wanted to calculate the difference between the two, so we decided to
 The first few rows of our combined DataFrame are shown down below:
 
 
-|                                   |   botskd |   midskd |   midminusbotdiff |
+|                             index |   botskd |   midskd |   midminusbotdiff |
 |:----------------------------------|---------:|---------:|------------------:|
 | ('ESPORTSTMNT01_2690210', 'Blue') |      0.5 |      1   |               0.5 |
 | ('ESPORTSTMNT01_2690210', 'Red')  |      4   |      2   |              -2   |
@@ -29,9 +29,11 @@ The first few rows of our combined DataFrame are shown down below:
 
 ### Univariate Analysis
 
-<iframe src="assets/kdratiosdiff.html" width=400 height=300 frameBorder=0></iframe>
+<iframe src="assets/kdratiosdiff.html" width=1000 height=600 frameBorder=0></iframe>
 The plot presented above representing the difference between mid and bot lane kill death ratios is skewed to the left, meaning that we see more extreme values on the left side. What this means is that there are instances where the bot has a much higher kill/death ratio than the mid's kill/death ratio. And in general, it looks like bots have a higher kill/death ratio than mids. 
 
+
+### Bivariate Analysis
 <iframe src="assets/killsvsdeaths-bots.html" width=400 height=300 frameBorder=0></iframe>
 
 
